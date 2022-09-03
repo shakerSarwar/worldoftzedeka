@@ -4,11 +4,12 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { useRouter } from "next/router";
 import Input from "@components/Input/Input";
-import hero from "../../images/login.svg";
+import hero from "../../images/resetpass.png";
 import bigAccount from "../../images/big-account.svg";
 import google from "../../images/icons/google.svg";
 import email from "../../images/icons/email.svg";
 import security from "../../images/icons/security.svg";
+
 import eye from "../../images/icons/eye.svg";
 import Confirmation from "@components/Confirmation/Confirmation";
 import Layout from "pages/shared/Layout";
@@ -69,17 +70,23 @@ export default function Home() {
       <div className="flex flex-col md:flex-row justify-center">
         <div className="bg-shades-100 p-6 flex items-center basis-1/2  justify-center">
           <div className="flex flex-col gap-2">
-            <h1> Login </h1>{" "}
-            <Input
-              placeholder={"E-mail / username"}
-              name="email"
-              value={details.email}
+            <h2>Reset Password</h2>{" "}
+              <Input
+             
+              type={`${passwordVisible ? "text" : "password"}`}
+              placeholder={`${passwordVisible ? "Chosse new password" : "password"}`}
+              icon={security}
+              backIcon={eye}
+              name="password"
+              value={details.password}
               onChange={onChange}
-              icon={email}
+              backIconCallback={() => {
+                setPasswordVisible((prev) => !prev);
+              }}
             />{" "}
             <Input
               type={`${passwordVisible ? "text" : "password"}`}
-              placeholder={`${passwordVisible ? "text" : "password"}`}
+              placeholder={`${passwordVisible ? "RE - Password" : "password"}`}
               icon={security}
               backIcon={eye}
               name="password"

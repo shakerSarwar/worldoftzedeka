@@ -52,7 +52,7 @@ const aboutUS = () => {
           </div>
         </div>
         <div className='flex flex-col justify-center items-center mt-5 mb-20'>
-          <h1 className='mb-10'>Services</h1>
+          <h1 className='mb-10'>Our Services</h1>
           <div className='flex flex-col'>
             <div className='flex gap-12'>
               <div className='bg-white p-6 shadow rounded-xl flex  flex-col justify-center items-center'>

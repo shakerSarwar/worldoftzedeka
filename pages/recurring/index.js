@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react';
-import CRMLayout from '../../pages/shared/CRMLayout';
-import { useSelector, useDispatch } from 'react-redux';
-import { setCRMId } from '../../store/menuSlice';
+import React, { useEffect } from "react";
+import CRMLayout from "../../pages/shared/CRMLayout";
+import { useSelector, useDispatch } from "react-redux";
+import { setCRMId } from "../../store/menuSlice";
 
 const id = 2;
 const recurring = () => {
@@ -10,7 +10,7 @@ const recurring = () => {
   useEffect(() => {
     dispatch(setCRMId(id));
   }, []);
-  return <CRMLayout>Hello wosld</CRMLayout>;
+  return <CRMLayout>Hello world</CRMLayout>;
 };
 
 export default recurring;
